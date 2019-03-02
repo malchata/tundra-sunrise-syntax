@@ -1,0 +1,300 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @princeton-orange;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+
+// Syntax styles
+
+.syntax--comment {
+  color: @princeton-orange;
+}
+
+.syntax--keyword {
+  color: @macaroni-and-cheese;
+
+  &.syntax--control {
+    color: @macaroni-and-cheese;
+  }
+
+  &.syntax--operator {
+    color: @syntax-text-color;
+  }
+
+  &.syntax--other.syntax--special-method {
+    color: @picton-blue;
+  }
+
+  &.syntax--other.syntax--unit {
+    color: @electric-lavender;
+  }
+}
+
+.syntax--storage {
+  color: @macaroni-and-cheese;
+}
+
+.syntax--constant {
+  color: @electric-lavender;
+
+  &.syntax--character.syntax--escape {
+    color: @jordy-blue;
+  }
+
+  &.syntax--numeric {
+    color: @electric-lavender;
+  }
+
+  &.syntax--other.syntax--color {
+    color: @jordy-blue;
+  }
+
+  &.syntax--other.syntax--symbol {
+    color: @very-light-azure;
+  }
+}
+
+.syntax--variable {
+  color: @dodger-blue;
+
+  &.syntax--interpolation {
+    color: darken(@dodger-blue, 10%);
+  }
+
+  &.syntax--parameter.syntax--function {
+    color: @syntax-text-color;
+  }
+}
+
+.syntax--invalid.syntax--illegal {
+  background-color: @dodger-blue;
+  color: @syntax-background-color;
+}
+
+.syntax--string {
+  color: @very-light-azure;
+
+
+  &.syntax--regexp {
+    color: @jordy-blue;
+
+    .syntax--source.syntax--ruby.syntax--embedded {
+      color: @electric-lavender;
+    }
+  }
+
+  &.syntax--other.syntax--link {
+    color: @dodger-blue;
+  }
+}
+
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
+      color: @princeton-orange;
+    }
+
+    &.syntax--string,
+    &.syntax--variable,
+    &.syntax--parameters,
+    &.syntax--array {
+      color: @syntax-text-color;
+    }
+
+    &.syntax--heading,
+    &.syntax--identity {
+      color: @picton-blue;
+    }
+
+    &.syntax--bold {
+      color: @light-crimson;
+      font-weight: bold;
+    }
+
+    &.syntax--italic {
+      color: @macaroni-and-cheese;
+      font-style: italic;
+    }
+  }
+
+  &.syntax--section.syntax--embedded {
+    color: @light-crimson;
+  }
+}
+
+.syntax--support {
+  &.syntax--class {
+    color: @light-crimson;
+  }
+
+  &.syntax--function  {
+    color: @jordy-blue;
+
+    &.syntax--any-method {
+      color: @picton-blue;
+    }
+  }
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--function {
+    color: @picton-blue;
+  }
+  &.syntax--name.syntax--type {
+    color: @light-crimson;
+    text-decoration: underline;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    color: @very-light-azure;
+  }
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
+    color: @light-crimson;
+  }
+
+  &.syntax--name.syntax--section {
+    color: @picton-blue;
+  }
+
+  &.syntax--name.syntax--tag {
+    color: @dodger-blue;
+    text-decoration: underline;
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @electric-lavender;
+
+    &.syntax--id {
+      color: @picton-blue;
+    }
+  }
+}
+
+.syntax--meta {
+  &.syntax--class {
+    color: @light-crimson;
+  }
+
+  &.syntax--link {
+    color: @electric-lavender;
+  }
+
+  &.syntax--require {
+    color: @picton-blue;
+  }
+
+  &.syntax--selector {
+    color: @macaroni-and-cheese;
+  }
+
+  &.syntax--separator {
+    background-color: @deep-koamaru;
+    color: @syntax-text-color;
+  }
+}
+
+.syntax--none {
+  color: @syntax-text-color;
+}
+
+.syntax--markup {
+  &.syntax--bold {
+    color: @electric-lavender;
+    font-weight: bold;
+  }
+
+  &.syntax--changed {
+    color: @macaroni-and-cheese;
+  }
+
+  &.syntax--deleted {
+    color: @dodger-blue;
+  }
+
+  &.syntax--italic {
+    color: @macaroni-and-cheese;
+    font-style: italic;
+  }
+
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+    color: @picton-blue;
+  }
+
+  &.syntax--inserted {
+    color: @very-light-azure;
+  }
+
+  &.syntax--list {
+    color: @dodger-blue;
+  }
+
+  &.syntax--quote {
+    color: @electric-lavender;
+  }
+
+  &.syntax--raw.syntax--inline {
+    color: @very-light-azure;
+  }
+}
+
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+  &.syntax--heading {
+    color: @very-light-azure;
+  }
+}
+
+
+// Mini editor
+
+atom-text-editor[mini] .scroll-view {
+  padding-left: 1px;
+}

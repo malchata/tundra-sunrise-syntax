@@ -1,0 +1,15 @@
+{
+  "name": "tundra-sunrise-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "A dark theme for Atom reminiscent of a sunrise over an icy landscape.",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/malchata/tundra-sunrise-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
