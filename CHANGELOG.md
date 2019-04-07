@@ -1,3 +1,6 @@
+## 0.1.3
+- Increased saturation and lightness of some colors to improve contrast and visual appeal.
+
 ## 0.1.2
 - Chose better colors for removed/added/modified markers in the gutter.
 
